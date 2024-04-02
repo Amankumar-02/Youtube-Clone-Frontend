@@ -114,7 +114,7 @@ function Navbar() {
                             />
                         </div>
 
-                        <div className="flex flex-col justify-between h-full py-5 px-3 j">
+                        <div className="flex flex-col justify-between h-full pt-5 pb-16 px-3">
                             <div className="flex flex-col gap-5">
                                 {sidePanelItems.map((item) => (
                                     <NavLink
