@@ -42,11 +42,11 @@ function Like({ isLiked, likesCount = 0, tweetId, commentId, videoId, size }) {
                     size={size}
                     onClick={handleLikeToggle}
                     className={`cursor-pointer ${
-                        localIsLiked ? "text-purple-500" : ""
+                        localIsLiked ? "text-red-500" : ""
                     }`}
                 />
-                <span className="text-xs mr-3">{localLikesCount}</span>
-                <BiSolidDislike size={size} />
+                <span className="text-xs">{localLikesCount}</span>
+                {/* <BiSolidDislike size={size} /> */}
             </div>
         </>
     );

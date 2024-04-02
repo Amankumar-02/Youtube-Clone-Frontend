@@ -6,14 +6,14 @@ function Avatar({ src, channelName }) {
 
     const handleAvatarClick = (e) => {
         e.stopPropagation()
-        navigate(`/channel/${channelName}`);
+        navigate(`/channel/${channelName}/videos`);
     };
     return (
         <>
             <img
                 src={src}
                 alt="avatar"
-                className="w-8 h-8 rounded-full object-cover"
+                className="w-10 h-10 rounded-full object-cover cursor-pointer"
                 onClick={handleAvatarClick}
             />
         </>

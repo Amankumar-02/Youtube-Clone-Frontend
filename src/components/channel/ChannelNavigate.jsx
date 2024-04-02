@@ -10,7 +10,7 @@ function ChannelNavigate({ username, edit }) {
                         to={`/edit/personalInfo`}
                         className={({ isActive }) =>
                             isActive
-                                ? "bg-white text-purple-600 border-b-2 border-purple-600"
+                                ? "bg-white text-red-600 border-b-2 border-red-600"
                                 : ""
                         }
                     >
@@ -20,7 +20,7 @@ function ChannelNavigate({ username, edit }) {
                         to={`/edit/password`}
                         className={({ isActive }) =>
                             isActive
-                                ? "bg-white text-purple-600 border-b-2 border-purple-600"
+                                ? "bg-white text-red-600 border-b-2 border-red-600"
                                 : ""
                         }
                     >
@@ -33,12 +33,12 @@ function ChannelNavigate({ username, edit }) {
     return (
         <>
             {/* channel options */}
-            <section className="text-white w-full flex justify-evenly items-center border-b-2 border-slate-600 text-sm sm:text-base sm:mt-4 md:mt-0 mt-2">
+            <section className="text-white w-full flex justify-evenly items-center border-b-2 border-slate-600 text-sm sm:text-base sm:mt-4 md:mt-6 mt-2">
                 <NavLink
                     to={`/channel/${username}/videos`}
                     className={({ isActive }) =>
                         isActive
-                            ? "bg-white text-purple-600 border-b-2 border-purple-600"
+                            ? "bg-white text-red-600 border-b-2 border-red-600 rounded-xl mb-1"
                             : ""
                     }
                 >
@@ -48,7 +48,7 @@ function ChannelNavigate({ username, edit }) {
                     to={`/channel/${username}/playlists`}
                     className={({ isActive }) =>
                         isActive
-                            ? "bg-white text-purple-600 border-b-2 border-purple-600"
+                            ? "bg-white text-red-600 border-b-2 border-red-600 rounded-xl mb-1"
                             : ""
                     }
                 >
@@ -58,7 +58,7 @@ function ChannelNavigate({ username, edit }) {
                     to={`/channel/${username}/tweets`}
                     className={({ isActive }) =>
                         isActive
-                            ? "bg-white text-purple-600 border-b-2 border-purple-600"
+                            ? "bg-white text-red-600 border-b-2 border-red-600 rounded-xl mb-1"
                             : ""
                     }
                 >
@@ -68,11 +68,11 @@ function ChannelNavigate({ username, edit }) {
                     to={`/channel/${username}/subscribed`}
                     className={({ isActive }) =>
                         isActive
-                            ? "bg-white text-purple-600 border-b-2 border-purple-600"
+                            ? "bg-white text-red-600 border-b-2 border-red-600 rounded-xl mb-1"
                             : ""
                     }
                 >
-                    <p className="p-2">Subscribed</p>
+                    <p className="p-2">Subscribers</p>
                 </NavLink>
             </section>
         </>

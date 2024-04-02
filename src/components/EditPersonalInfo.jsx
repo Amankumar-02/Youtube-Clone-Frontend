@@ -15,8 +15,8 @@ function EditPersonalInfo() {
     const auth = useSelector((state) => state.auth?.userData);
 
     useEffect(() => {
+        setValue("username", auth?.username);
         setValue("fullName", auth?.fullName);
-        setValue("email", auth?.email);
     }, [auth, setValue]);
 
     const saveChanges = (data) => {
@@ -25,8 +25,8 @@ function EditPersonalInfo() {
 
     const reset = (e) => {
         e.preventDefault();
+        setValue("username", auth?.username);
         setValue("fullName", auth?.fullName);
-        setValue("email", auth?.email);
     };
 
     return (
@@ -45,11 +45,11 @@ function EditPersonalInfo() {
                     >
                         <div className="flex flex-col">
                             <Input2
-                                label="Full Name"
+                                label="User Name"
                                 type="text"
                                 className="rounded"
-                                {...register("fullName", {
-                                    required: "FullName is required",
+                                {...register("username", {
+                                    required: "Username is required",
                                 })}
                             />
                             {errors.fullName && (
@@ -60,11 +60,11 @@ function EditPersonalInfo() {
                         </div>
                         <div className="flex flex-col">
                             <Input2
-                                label="Email Address"
-                                type="email"
+                                label="Full Name"
+                                type="text"
                                 className="rounded"
-                                {...register("email", {
-                                    required: "Email is required",
+                                {...register("fullName", {
+                                    required: "Fullname is required",
                                 })}
                             />
                             {errors.email && (
@@ -73,16 +73,16 @@ function EditPersonalInfo() {
                                 </span>
                             )}
                         </div>
-                        <div className="flex justify-between mt-4">
-                            <Button
+                        <div className="flex justify-center mt-4">
+                            {/* <Button
                                 onClick={(e) => reset(e)}
                                 className="bg-gray-500 text-white px-4 py-2 rounded"
                             >
                                 Reset
-                            </Button>
+                            </Button> */}
                             <Button
                                 type="submit"
-                                className="bg-purple-500 text-white px-4 py-2 rounded"
+                                className="bg-[#FF0000] text-white px-4 py-2 rounded"
                             >
                                 Save Changes
                             </Button>

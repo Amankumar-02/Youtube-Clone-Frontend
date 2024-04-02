@@ -36,7 +36,7 @@ function Navbar() {
         {
             icon: <HiOutlineVideoCamera size={25} />,
             title: "My Content",
-            url: `/channel/${username}`,
+            url: `/channel/${username}/videos`,
         },
     ];
 
@@ -77,14 +77,14 @@ function Navbar() {
                         />
                     </div>
                 ) : (
-                    <div className="space-x-2 sm:block hidden">
+                    <div className="space-x-4 sm:block hidden">
                         <Link to={"/login"}>
-                            <Button className="bg-[#222222] border hover:bg-black border-slate-500 sm:px-4 sm:py-2 p-2">
+                            <Button className="bg-[#222222] border hover:bg-black border-slate-500 sm:px-4 sm:py-1 p-2 rounded-lg">
                                 Login
                             </Button>
                         </Link>
                         <Link to={"/signup"}>
-                            <Button className="font-semibold border hover:bg-[#222222] border-slate-500 sm:px-4 sm:py-2 ">
+                            <Button className="font-semibold border hover:bg-[#222222] border-slate-500 sm:px-4 sm:py-1 rounded-lg">
                                 Sign up
                             </Button>
                         </Link>
@@ -124,10 +124,10 @@ function Navbar() {
                                             setToggleMenu((prev) => !prev)
                                         }
                                         className={({ isActive }) =>
-                                            isActive ? "bg-purple-500" : ""
+                                            isActive ? "bg-[#FF0000]" : ""
                                         }
                                     >
-                                        <div className="flex items-center border border-slate-500 gap-5 px-3 py-1 hover:bg-purple-500">
+                                        <div className="flex items-center border border-slate-500 gap-5 px-3 py-1 hover:bg-[#FF0000]">
                                             <div>{item.icon}</div>
                                             <span className="text-lg">
                                                 {item.title}

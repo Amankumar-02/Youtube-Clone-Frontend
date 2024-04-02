@@ -8,7 +8,8 @@ function Logo({ size = "30" }) {
             <Link to={'/'} className="flex gap-2 items-center">
                 <IoLogoYoutube
                     size={size}
-                    color="#A855F7"
+                    // color="#A855F7"
+                    color="#FF0000"
                 />
                 <span className="font-bold text-white">YOUTUBE</span>
             </Link>

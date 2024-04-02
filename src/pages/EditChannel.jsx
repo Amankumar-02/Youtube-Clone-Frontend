@@ -27,7 +27,7 @@ function EditChannel() {
                     avatar={channel?.avatar.url}
                     subscribedCount={channel?.channelsSubscribedToCount}
                     fullName={channel?.fullName}
-                    subscribersCount={channel?.subcribersCount}
+                    subscribersCount={channel?.subscriberCount}
                     isSubscribed={channel?.isSubscribed}
                     channelId={channel?._id}
                     edit={true}

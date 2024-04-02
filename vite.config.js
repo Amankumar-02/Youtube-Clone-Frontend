@@ -8,4 +8,9 @@ export default defineConfig({
       '/api': 'http://localhost:3000/api/v1'
     }
   }
+  // server: {
+  //   proxy: {
+  //     '/api': 'https://nervous-newt-purse.cyclic.app/api/v1'
+  //   }
+  // }
 })

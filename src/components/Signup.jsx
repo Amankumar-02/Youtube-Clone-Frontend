@@ -59,7 +59,7 @@ function SignUp() {
                                     className="w-full h-28 object-cover border-none border-slate-900"
                                     cameraIcon
                                 />
-                                <div className="text-sm absolute right-2 bottom-2 hover:text-purple-500 cursor-default">
+                                <div className="text-sm absolute right-2 bottom-2 hover:text-red-500 cursor-default">
                                     cover Image
                                 </div>
                             </div>
@@ -83,7 +83,7 @@ function SignUp() {
                                         className=" object-cover w-full h-full border-2 border-double rounded-full"
                                     />
                                     <FaCamera
-                                        className="absolute hover:text-purple-500"
+                                        className="absolute hover:text-red-500"
                                         size={20}
                                     />
                                 </div>
@@ -169,8 +169,8 @@ function SignUp() {
 
                         <Button
                             type="submit"
-                            bgColor="bg-purple-500"
-                            className="w-full sm:py-3 py-2 hover:bg-purple-700 text-lg"
+                            bgColor="bg-[#FF0000]"
+                            className="w-full sm:py-3 py-2 hover:bg-red-700 text-lg rounded-xl"
                         >
                             Signup
                         </Button>
@@ -179,7 +179,7 @@ function SignUp() {
                             Already have an account?{" "}
                             <Link
                                 to={"/login"}
-                                className="text-purple-600 cursor-pointer hover:opacity-70"
+                                className="text-red-600 cursor-pointer hover:opacity-70"
                             >
                                 Login
                             </Link>

@@ -44,7 +44,7 @@ function ChannelPlaylist() {
                 {authId === userId && (
                     <div className="w-full flex justify-center mt-5">
                         <Button
-                            className="bg-purple-500 text-sm p-2"
+                            className="bg-[#FF0000] text-sm p-2 rounded-lg"
                             onClick={() =>
                                 setOpenCreatePlaylist((prev) => !prev)
                             }
@@ -96,7 +96,7 @@ function ChannelPlaylist() {
                                     </span>
                                 )}
                                 <Button
-                                    className="bg-purple-500 text-sm p-2 w-full"
+                                    className="bg-[#FF0000] text-sm p-2 w-full"
                                     type="submit"
                                 >
                                     Create Playlist
@@ -106,10 +106,10 @@ function ChannelPlaylist() {
                     </div>
                 )}
                 <div className="grid xl:grid-cols-3 md:grid-cols-2 p-2 gap-5 grid-cols-1 w-full mt-5">
-                    {playlists?.map((playlist) => (
+                    {playlists?.map((playlist, index) => (
                         <Link
-                            to={`/playlist/${playlist._id}`}
-                            key={playlist.id}
+                            // to={`/playlist/${playlist._id}`}
+                            key={index}
                             className="relative h-[15rem] w-full border border-slate-500"
                         >
                             <div className="absolute flex justify-between bottom-0 left-0 border-t py-1 px-2 w-full backdrop-contrast-75">

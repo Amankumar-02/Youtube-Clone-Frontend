@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUserChannelSubscribers } from "../../store/Slices/subscriptionSlice";
 import { Avatar, Button } from "../../components";
 import { Link } from "react-router-dom";
+import { FaPlayCircle } from "react-icons/fa";
 
 function ChannelSubscribers() {
     const dispatch = useDispatch();
@@ -19,8 +20,17 @@ function ChannelSubscribers() {
 
     return (
         <>
-            {subscribers?.map((subscriber) => (
+            {!subscribers.length? (<>
+                <div className="h-[70%] flex flex-col items-center justify-center">
+              <FaPlayCircle size={45} className="text-red-500" />
+              <h1 className="text-white mt-4 text-lg">
+                Nobody Subscribe you
+              </h1>
+            </div>
+            </>):(<>
+                {subscribers?.map((subscriber) => (
                 <Link
+                    to={`/channel/${subscriber?.subscriber?.username}/videos`}
                     key={subscriber?.subscriber?._id}
                     className="flex border-b border-slate-500 px-3 py-1 justify-between items-center text-white"
                 >
@@ -40,7 +50,7 @@ function ChannelSubscribers() {
                         </div>
                     </div>
                     <div>
-                        <Button className="bg-purple-500 text-black text-xs py-1 px-2">
+                        <Button className="bg-[#FF0000] text-black text-xs py-1 px-2">
                             {subscriber?.subscriber?.subscribedToSubscriber
                                 ? "Subscribed"
                                 : "subscribe"}
@@ -48,6 +58,7 @@ function ChannelSubscribers() {
                     </div>
                 </Link>
             ))}
+            </>)}
         </>
     );
 }

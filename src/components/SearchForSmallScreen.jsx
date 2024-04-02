@@ -6,12 +6,14 @@ import Button from "./Button";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
 function SearchForSmallScreen({ open, setOpenSearch }) {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, resetField } = useForm();
     const navigate = useNavigate();
 
     const search = (data) => {
         const query = data?.query;
-        navigate(`/search/${query}`);
+        // navigate(`/search/${query}`);
+        navigate(`channel/${query}/videos`);
+        resetField("query");
         setOpenSearch((prev) => !prev);
     };
 
@@ -28,7 +30,7 @@ function SearchForSmallScreen({ open, setOpenSearch }) {
                         </div>
                         <form
                             onSubmit={handleSubmit(search)}
-                            className="flex items-center mt-10"
+                            className="flex items-center gap-2 mt-10"
                         >
                             <Input
                                 type="text"
@@ -38,7 +40,7 @@ function SearchForSmallScreen({ open, setOpenSearch }) {
                             />
                             <Button
                                 type="submit"
-                                className="px-4 py-2 bg-purple-500 text-white font-semibold hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                                className="px-4 py-2 bg-[#FF0000] text-white font-semibold hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-xl"
                             >
                                 Search
                             </Button>

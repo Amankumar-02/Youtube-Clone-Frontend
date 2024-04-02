@@ -36,7 +36,7 @@ function Sidebar() {
         {
             icon: <HiOutlineVideoCamera size={25} />,
             title: "My Content",
-            url: `/channel/${username}`,
+            url: `/channel/${username}/videos`,
         },
         {
             icon: <IoFolderOutline size={25} />,
@@ -88,10 +88,10 @@ function Sidebar() {
                                 to={item.url}
                                 key={item.title}
                                 className={({ isActive }) =>
-                                    isActive ? "bg-purple-500" : ""
+                                    isActive ? "bg-[#FF0000] rounded-lg" : ""
                                 }
                             >
-                                <div className="flex items-center gap-2 justify-center sm:justify-start hover:bg-purple-500 cursor-pointer py-1 px-2 border border-slate-600">
+                                <div className="flex items-center gap-2 justify-center sm:justify-start hover:bg-[#FF0000] cursor-pointer py-1 px-2 border border-slate-600 rounded-lg">
                                     {item.icon}
                                     <span className="text-base hidden md:block">
                                         {item.title}
@@ -104,7 +104,7 @@ function Sidebar() {
                     <div className="space-y-4 mb-10">
                         {username && (
                             <div
-                                className="flex items-center gap-2 justify-center sm:justify-start hover:bg-purple-500 cursor-pointer py-1 px-2 border border-slate-600"
+                                className="flex items-center gap-2 justify-center sm:justify-start hover:bg-[#FF0000] cursor-pointer py-1 px-2 border border-slate-600 rounded-lg"
                                 onClick={() => logout()}
                             >
                                 <IoMdLogOut size={25} />
@@ -113,12 +113,12 @@ function Sidebar() {
                                 </span>
                             </div>
                         )}
-                        <div className="flex items-center gap-2 justify-center sm:justify-start hover:bg-purple-500 cursor-pointer py-1 px-2 border border-slate-600">
+                        {/* <div className="flex items-center gap-2 justify-center sm:justify-start hover:bg-[#FF0000] cursor-pointer py-1 px-2 border border-slate-600">
                             <CiSettings size={25} />
                             <span className="text-base hidden md:block">
                                 Settings
                             </span>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@ function Sidebar() {
                         to={item.url}
                         key={item.title}
                         className={({ isActive }) =>
-                            isActive ? "text-purple-500" : ""
+                            isActive ? "text-red-500" : ""
                         }
                     >
                         <div className="flex flex-col items-center gap-1 cursor-pointer p-1">

@@ -4,12 +4,14 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 function Search() {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, resetField } = useForm();
     const navigate = useNavigate();
 
     const search = (data) => {
         const query = data?.query;
-        navigate(`/search/${query}`);
+        // navigate(`/search/${query}`);
+        navigate(`channel/${query}/videos`);
+        resetField("query");
     };
 
     return (

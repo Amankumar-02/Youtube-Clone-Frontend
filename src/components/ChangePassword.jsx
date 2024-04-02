@@ -18,7 +18,8 @@ function ChangePassword() {
         dispatch(
             changePassword({
                 oldPassword: data?.oldPassword,
-                newPassword: data?.oldPassword,
+                newPassword: data?.newPassword,
+                confirmPassword: data?.confirmPassword,
             })
         );
         resetField("oldPassword");
@@ -92,7 +93,7 @@ function ChangePassword() {
                     <div className="flex justify-center mt-4">
                         <Button
                             type="submit"
-                            className="bg-purple-500 text-white px-4 py-2 rounded"
+                            className="bg-[#FF0000] text-white px-4 py-2 rounded"
                         >
                             Change Password
                         </Button>

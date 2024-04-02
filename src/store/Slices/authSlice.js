@@ -35,7 +35,8 @@ export const userLogin = createAsyncThunk("login", async (data) => {
         const response = await axiosInstance.post("/users/login", data);
         return response.data.data.user;
     } catch (error) {
-        toast.error(error?.response?.data?.error);
+        // added letterCase to other Errors
+        toast.error(error?.response?.data?.error.toUpperCase());
         throw error;
     }
 });
@@ -197,13 +198,13 @@ const authSlice = createSlice({
         builder.addCase(updateCoverImg.rejected, (state) => {
             state.loading = false;
         });
-        builder.addCase(updateUserDetails.pending, (state) => {
-            state.loading = true;
-        });
-        builder.addCase(updateUserDetails.fulfilled, (state, action) => {
-            state.loading = false;
-            state.userData = action.payload;
-        });
+        // builder.addCase(updateUserDetails.pending, (state) => {
+        //     state.loading = true;
+        // });
+        // builder.addCase(updateUserDetails.fulfilled, (state, action) => {
+        //     state.loading = false;
+        //     state.userData = action.payload;
+        // });
     },
 });
 
