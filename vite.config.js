@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'http://localhost:3000/api/v1'
+      '/api': 'https://youtube-clone-backend.cyclic.app/api/v1'
     }
   }
   // server: {
