@@ -44,7 +44,7 @@ function ChannelNavigate({ username, edit }) {
                 >
                     <p className="p-2">Videos</p>
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                     to={`/channel/${username}/playlists`}
                     className={({ isActive }) =>
                         isActive
@@ -53,7 +53,7 @@ function ChannelNavigate({ username, edit }) {
                     }
                 >
                     <p className="p-2">Playlists</p>
-                </NavLink>
+                </NavLink> */}
                 <NavLink
                     to={`/channel/${username}/tweets`}
                     className={({ isActive }) =>
